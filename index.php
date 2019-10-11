@@ -8,3 +8,5 @@ $filho = new Filho(80, 32, 1.79);
 $filho->setTime("dotinha");
 echo $filho;
 echo "<br>".$filho->getTime()."<br>";
+
+echo json_encode($pessoa);

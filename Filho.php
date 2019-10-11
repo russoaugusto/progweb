@@ -9,7 +9,7 @@ class Filho extends Pessoa{
 		return $this->time;
 	}
 
-	public function setTime(){
+	public function setTime($time){
 		$this->time=$time;
 	}
 }

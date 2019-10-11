@@ -1,6 +1,6 @@
 <?php
 
-class Pessoa {
+class Pessoa implements JsonSerializable {
 	private $altura;
 	private $idade;
 	private $peso;
@@ -41,5 +41,13 @@ class Pessoa {
 			"Idade ".$this->idade."<br>".
 			"Altura ".$this->altura."<br>";
 		return $string;
+	}
+
+	public function JsonSerialize(){
+		return  [			
+				"Peso" => $this->peso,
+				"Idade" => $this->idade,
+				"Altura" => $this->altura			
+		];
 	}
 }

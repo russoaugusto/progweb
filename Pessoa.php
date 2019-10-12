@@ -1,6 +1,6 @@
 <?php
 
-class Pessoa implements JsonSerializable {
+class Pessoa extends Conexao implements JsonSerializable {
 	private $altura;
 	private $idade;
 	private $peso;

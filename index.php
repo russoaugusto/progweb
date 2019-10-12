@@ -10,5 +10,7 @@ $filho->setTime("dotinha");
 //echo $filho;
 //echo "<br>".$filho->getTime()."<br>";
 
-http_response_code(201);
-echo json_encode($pessoa);
+echo $filho->findAll();
+
+//http_response_code(201);
+//echo json_encode($pessoa);

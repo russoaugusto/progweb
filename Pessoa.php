@@ -1,5 +1,5 @@
 <?php
-
+include("conexao.php");
 class Pessoa extends Conexao implements JsonSerializable {
 	private $altura;
 	private $idade;
@@ -49,5 +49,12 @@ class Pessoa extends Conexao implements JsonSerializable {
 				"Idade" => $this->idade,
 				"Altura" => $this->altura			
 		];
+	}
+
+	public function findAll(){
+		$sql = "select * from conteudo";
+		$consulta = Conexao::prepare($sql);
+		$consulta->execute();
+		return $consulta->fetchAll();
 	}
 }
